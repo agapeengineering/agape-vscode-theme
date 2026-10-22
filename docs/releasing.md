@@ -11,19 +11,19 @@
 | Intended publisher / namespace | `agapeengineering`                    |
 | Intended extension ID          | `agapeengineering.agape-theme`        |
 | Theme picker labels            | agape Light; agape Dark               |
-| Initial candidate              | 0.1.0                                 |
+| GitHub release                 | 0.1.0                                 |
 
-The public source repository is `agapeengineering/agape-vscode-theme`. Marketplace and Open VSX listings are not live yet; confirm publisher and namespace ownership before registry publication. Keep the same extension name and publisher/namespace across registries. Register the final identity before the first public release; changing it later creates a separate extension.
+The public source repository is `agapeengineering/agape-vscode-theme`. GitHub release v0.1.0 provides the VSIX and SHA-256 checksum for manual installation. Marketplace and Open VSX listings are not live yet; confirm publisher and namespace ownership before registry publication. Keep the same extension name and publisher/namespace across registries. Register the final identity before the first registry release; changing it later creates a separate extension.
 
-## Prepare the first release
+## Prepare a release
 
 1. Review the two included VS Code screenshots described in `screenshots.md`. Refresh them if the palette or code samples change; ensure README images match the final packaged themes.
 2. Verify the repository, homepage and issue URLs in `package.json`, and push the reviewed source to the public GitHub repository. `vsce` resolves README links against that repository.
 3. Review the entire public tree, including untracked starter files, licenses, sample code and images. Exclude local paths, personal screenshots, preview data and credentials. Verify any history that will be pushed.
-4. Confirm publisher ownership on both registries. Keep credentials outside the repository and logs.
+4. For Marketplace/Open VSX publication, confirm publisher and namespace ownership. Keep credentials outside the repository and logs. A GitHub-only release does not require registry accounts.
 5. Choose the release version. Use 0.1.0 for the first public preview; use 1.0.0 when the stable release is approved. Update `package.json` and the lock file together, then update the changelog and README version examples. The packaging script derives its filename from the manifest.
 6. Run the checks below on the exact source to release, test a fresh VSIX installation, then create a GitHub tag/release and attach the VSIX and its SHA-256 checksum.
-7. Publish the same tested VSIX to Marketplace and Open VSX. Verify labels, icon, screenshots, install behavior and version on both listings. Add real listing links to the README only after they exist.
+7. When registry publication is authorized and accounts are configured, publish the same tested VSIX to Marketplace and Open VSX. Verify labels, icon, screenshots, install behavior and version on both listings. Add real listing links to the README only after they exist.
 
 ## Validate
 

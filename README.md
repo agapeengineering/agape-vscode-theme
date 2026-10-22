@@ -21,16 +21,21 @@ Both captures show the same Python sample with Pylance semantic highlighting ena
 
 ## Install
 
-The project is preparing its first public release. Marketplace and Open VSX listings are not live yet.
+Requires **VS Code 1.100.0 or newer**. No Node.js or publishing account is needed to install the theme.
 
-To try the current package, build it from source:
+1. Download [`agape-theme-0.1.0.vsix`](https://github.com/agapeengineering/agape-vscode-theme/releases/download/v0.1.0/agape-theme-0.1.0.vsix) from the [v0.1.0 release](https://github.com/agapeengineering/agape-vscode-theme/releases/tag/v0.1.0).
+2. In VS Code, run **Extensions: Install from VSIX…** and select the downloaded file.
+3. Open **Preferences: Color Theme** and select **agape Light** or **agape Dark**.
+
+To verify the download, also download [`agape-theme-0.1.0.vsix.sha256`](https://github.com/agapeengineering/agape-vscode-theme/releases/download/v0.1.0/agape-theme-0.1.0.vsix.sha256). With both files in the same folder, run on macOS:
 
 ```sh
-npm ci
-npm run package
+shasum -a 256 -c agape-theme-0.1.0.vsix.sha256
 ```
 
-In VS Code, run **Extensions: Install from VSIX…** and choose `dist/agape-theme-0.1.0.vsix`. Then open **Preferences: Color Theme** and select **agape Light** or **agape Dark**.
+On Linux, use `sha256sum -c agape-theme-0.1.0.vsix.sha256`. On Windows, run `Get-FileHash .\agape-theme-0.1.0.vsix -Algorithm SHA256` in PowerShell and compare it with the checksum file.
+
+Marketplace and Open VSX listings are not live yet. To build from source instead, follow the Development section below.
 
 Theme picker shortcut: **⌘K, ⌘T** on macOS; **Ctrl+K, Ctrl+T** on Windows/Linux.
 
@@ -79,7 +84,7 @@ Edit `source/palette.json` and `scripts/build.mjs`; keep generated themes synchr
 
 Checks enforce 4.5:1 for the tested syntax, UI text and terminal pairs, including syntax over search and overlapping diff highlights, plus 3:1 for tested focus indicators. This is not a complete accessibility certification or a guarantee of every language grammar's token coverage. Disabled controls and decorative guides are not treated as normal body text.
 
-Version **0.1.0** is the first public preview candidate. Publisher ID `agapeengineering` is provisional until registry ownership is confirmed. The expected extension ID is `agapeengineering.agape-theme`.
+Version **0.1.0** is available as a GitHub release. Publisher ID `agapeengineering` is provisional until registry ownership is confirmed. The expected extension ID is `agapeengineering.agape-theme`.
 
 ## Documentation
 
