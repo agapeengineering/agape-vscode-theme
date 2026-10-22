@@ -1,0 +1,80 @@
+{
+  "name": "agape-theme",
+  "displayName": "agape Theme",
+  "description": "A warm Adobe light theme and neutral graphite dark theme, with cinnamon accents and distinct syntax colors.",
+  "version": "0.1.0",
+  "publisher": "agapeengineering",
+  "author": "agape engineering",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0",
+    "node": ">=22"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "light",
+    "dark",
+    "cinnamon",
+    "adobe",
+    "warm",
+    "minimal"
+  ],
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#E7D8C0",
+    "theme": "light"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs && node scripts/check-preview.mjs",
+    "package": "npm run format:check && npm run build && npm run check && node scripts/package.mjs",
+    "preview": "npm run package && node scripts/preview.mjs",
+    "preview:install": "node scripts/preview.mjs --install-only",
+    "preview:light": "npm run package && node scripts/preview.mjs --light",
+    "preview:dark": "npm run package && node scripts/preview.mjs --dark",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "agape Light",
+        "label": "agape Light",
+        "uiTheme": "vs",
+        "path": "./themes/agape-light.json"
+      },
+      {
+        "id": "agape Dark",
+        "label": "agape Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/agape-dark.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.0.0",
+    "prettier": "3.9.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agapeengineering/agape-vscode-theme.git"
+  },
+  "homepage": "https://github.com/agapeengineering/agape-vscode-theme#readme",
+  "bugs": {
+    "url": "https://github.com/agapeengineering/agape-vscode-theme/issues"
+  },
+  "files": [
+    "themes/agape-light.json",
+    "themes/agape-dark.json",
+    "assets/icon.png",
+    "assets/screenshots/agape-light.png",
+    "assets/screenshots/agape-dark.png",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "TRADEMARKS.md"
+  ]
+}

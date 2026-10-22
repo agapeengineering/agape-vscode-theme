@@ -1,0 +1,19 @@
+:root {
+  --canvas: #e7d8c0;
+  --ink: #202020;
+  --accent: #9c4428;
+}
+
+/* Look at selectors, property names, values and punctuation. */
+.panel[data-active='true'] {
+  background: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--accent);
+  padding: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    transition: none;
+  }
+}

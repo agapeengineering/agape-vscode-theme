@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.preview/
+themes/
+source/vscode-color-keys.json
+package-lock.json

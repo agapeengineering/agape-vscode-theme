@@ -1,0 +1,8 @@
+{
+  "studio": "agape engineering",
+  "appearance": "agape Theme",
+  "active": true,
+  "progress": 0.75,
+  "materials": ["adobe", "graphite", "cinnamon"],
+  "optional": null
+}
